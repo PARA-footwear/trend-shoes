@@ -3,138 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Трендові кросівки | Розпродаж складу</title>
+    <title>Жіночі кросівки 2414 | Розпродаж</title>
 
     <script>
         // ===========================================================
-        // ⚙️ БЛОК НАЛАШТУВАНЬ (Ви вже все прописали, я залишаю як є)
+        // ⚙️ БЛОК НАЛАШТУВАНЬ
         // ===========================================================
         const CONFIG = {
-            productName: "Жіночі кроссівки 2414", 
+            productName: "Жіночі кросівки 2414", 
             priceOld: "2400",                
             priceNew: 1200,                   
             
+            // Назви ваших фото (мають бути 1.jpg, 2.jpg... у папці)
             images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'], 
             
             sizes: ["36", "37", "38", "39", "40", "41"], 
             
-            fbPixel: "ВАШ_ID_ПІКСЕЛЯ", 
-            ttPixel: "ВАШ_TIKTOK_ID",  
+            // ПІКСЕЛІ (Впишіть свої ID)
+            fbPixel: "ВАШ_ID_FACEBOOK", 
+            ttPixel: "ВАШ_ID_TIKTOK", // <--- ВПИШІТЬ СЮДИ ID ТІКТОК ПІКСЕЛЯ
             
             tgToken: "8682349813:AAH8KuVg1KNY-c_nBu2EEz2l0f_1QloTqW8",
             tgChats: "8345637105, 5137629200, -5150186307"
         };
-        // ===========================================================
     </script>
-    
+
+    <!-- ТІКТОК ПІКСЕЛЬ (ВЖЕ НАЛАШТОВАНИЙ) -->
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+      if(CONFIG.ttPixel && CONFIG.ttPixel !== "ВАШ_ID_TIKTOK") {
+          ttq.load(CONFIG.ttPixel);
+          ttq.page();
+      }
+    }(window, document, 'ttq');
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; -webkit-tap-highlight-color: transparent; }
-        html, body { background-color: #f4f4f4; color: #333; line-height: 1.5; overflow-x: hidden; width: 100%; }
+        html, body { background-color: #fcfcfc; color: #333; line-height: 1.6; overflow-x: hidden; width: 100%; }
         
-        header { background-color: #d32f2f; color: #fff; padding: 12px 0; text-align: center; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; box-shadow: 0 4px 10px rgba(211,47,47,0.3); }
+        header { background-color: #d32f2f; color: #fff; padding: 12px 0; text-align: center; font-weight: 800; text-transform: uppercase; font-size: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .urgency-banner { background: #111; color: #fff; text-align: center; padding: 8px; font-size: 13px; font-weight: 600; }
         .urgency-banner span { color: #f1c40f; }
 
-        .container { max-width: 1000px; margin: 20px auto; display: flex; flex-wrap: wrap; background: #fff; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); overflow: hidden; }
+        .container { max-width: 1000px; margin: 20px auto; display: flex; flex-wrap: wrap; background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; }
         
         .product-gallery { flex: 1 1 500px; padding: 20px; display: flex; flex-direction: column; align-items: center; background: #fff; width: 100%; }
         .gallery-layout { display: flex; align-items: center; justify-content: center; gap: 15px; width: 100%; position: relative; }
-        .main-image-container { flex: 1; max-width: 400px; aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; position: relative; display: flex; justify-content: center; align-items: center; background: #f9f9f9; cursor: zoom-in; }
-        #mainImage { width: 100%; height: 100%; object-fit: contain; transition: transform 0.2s ease; transform-origin: center center; }
+        .main-image-container { flex: 1; max-width: 450px; aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; position: relative; display: flex; justify-content: center; align-items: center; background: #f9f9f9; cursor: zoom-in; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        #mainImage { width: 100%; height: 100%; object-fit: contain; transition: transform 0.2s ease; }
         
-        .nav-arrow { width: 45px; height: 45px; background: #fff; border: 1px solid #eaeaea; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #111; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.05); flex-shrink: 0; z-index: 10; }
-        .nav-arrow:hover { background: #d32f2f; color: #fff; border-color: #d32f2f; transform: scale(1.1); }
+        .nav-arrow { width: 45px; height: 45px; background: #fff; border: 1px solid #eee; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #111; transition: 0.3s; z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .nav-arrow:hover { background: #d32f2f; color: #fff; }
         
         .discount-badge { position: absolute; top: 10px; left: 10px; background: #d32f2f; color: #fff; padding: 5px 10px; font-weight: 800; border-radius: 4px; font-size: 14px; z-index: 5; }
-        .image-pagination { position: absolute; bottom: 10px; width: 100%; display: flex; justify-content: center; gap: 6px; z-index: 10; pointer-events: none; }
+        .image-pagination { position: absolute; bottom: 15px; width: 100%; display: flex; justify-content: center; gap: 8px; z-index: 10; pointer-events: none; }
         .dot { width: 8px; height: 8px; background: rgba(0,0,0,0.2); border-radius: 50%; transition: 0.3s; pointer-events: auto; cursor: pointer; }
         .dot.active { background: #d32f2f; transform: scale(1.3); }
 
-        .thumbnails-container { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 15px; width: 100%; }
-        .thumbnail { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; opacity: 0.6; border: 2px solid transparent; transition: 0.3s; }
+        .thumbnails-container { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 15px; width: 100%; }
+        .thumbnail { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer; opacity: 0.5; border: 2px solid transparent; transition: 0.3s; }
         .thumbnail.active { opacity: 1; border-color: #d32f2f; }
 
         .product-info { flex: 1 1 400px; padding: 30px; display: flex; flex-direction: column; width: 100%; }
-        h1 { font-size: 26px; margin-bottom: 10px; color: #111; font-weight: 900; line-height: 1.2; text-transform: uppercase; }
+        h1 { font-size: 28px; margin-bottom: 10px; color: #111; font-weight: 900; line-height: 1.2; text-transform: uppercase; }
+        .price-wrap { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; background: #fdf2f2; padding: 20px; border-radius: 10px; border: 1px dashed #d32f2f; }
+        .price-old { font-size: 20px; color: #999; text-decoration: line-through; font-weight: 600; }
+        .price-new { font-size: 38px; color: #d32f2f; font-weight: 900; }
         
-        .rating { display: flex; align-items: center; gap: 5px; margin-bottom: 15px; color: #f1c40f; font-size: 16px; }
-        .rating span { color: #555; font-size: 13px; margin-left: 5px; font-weight: 500; }
-        
-        .price-wrap { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; background: #fdf2f2; padding: 15px; border-radius: 8px; border: 1px dashed #d32f2f; }
-        .price-old { font-size: 18px; color: #999; text-decoration: line-through; font-weight: 600; }
-        .price-new { font-size: 36px; color: #d32f2f; font-weight: 900; }
-        
-        .selector-title { font-weight: 700; font-size: 14px; display: flex; justify-content: space-between; text-transform: uppercase; margin-bottom: 15px; }
-        .size-options { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 25px; }
-        .size-btn { padding: 10px 0; border: 1px solid #ccc; background: #fff; cursor: pointer; flex: 1 0 80px; border-radius: 6px; font-size: 15px; font-weight: 600; transition: 0.2s; }
+        .size-options { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 25px; }
+        .size-btn { padding: 12px 0; border: 1px solid #ccc; background: #fff; cursor: pointer; flex: 1 0 80px; border-radius: 6px; font-size: 16px; font-weight: 700; transition: 0.2s; }
         .size-btn.active { border-color: #d32f2f; background: #d32f2f; color: #fff; }
-        .size-link { color: #0066cc; font-size: 13px; text-decoration: underline; cursor: pointer; text-transform: none; }
 
-        @keyframes pulse-btn { 0% {transform: scale(1);} 50% {transform: scale(1.03); box-shadow: 0 10px 20px rgba(211,47,47,0.4);} 100% {transform: scale(1);} }
-        .buy-btn { background: linear-gradient(135deg, #ff416c, #ff4b2b); color: #fff; padding: 20px; text-align: center; font-size: 20px; font-weight: 900; border-radius: 8px; cursor: pointer; width: 100%; border: none; text-transform: uppercase; animation: pulse-btn 2s infinite; box-shadow: 0 5px 15px rgba(211,47,47,0.3); transition: 0.3s; }
+        .buy-btn { background: linear-gradient(135deg, #ff416c, #ff4b2b); color: #fff; padding: 20px; text-align: center; font-size: 20px; font-weight: 900; border-radius: 8px; cursor: pointer; width: 100%; border: none; text-transform: uppercase; animation: pulse 2s infinite; box-shadow: 0 5px 15px rgba(211,47,47,0.3); }
+        @keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.02); box-shadow: 0 10px 20px rgba(211,47,47,0.4);} 100% {transform: scale(1);} }
 
-        .features-list { margin-top: 10px; background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #eee; }
-        .feature-item { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px; font-weight: 500; }
-        .feature-item span { font-size: 20px; }
-
-        .reviews-section { max-width: 1000px; margin: 40px auto; padding: 0 15px; }
-        .section-title { text-align: center; font-size: 24px; font-weight: 900; margin-bottom: 20px; text-transform: uppercase; }
-        .reviews-slider { display: flex; gap: 15px; overflow-x: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 15px; scrollbar-width: none; }
+        .reviews-slider { display: flex; gap: 15px; overflow-x: auto; scroll-behavior: smooth; scroll-snap-type: x mandatory; padding-bottom: 20px; scrollbar-width: none; }
         .reviews-slider::-webkit-scrollbar { display: none; }
+        .text-review-card { flex: 0 0 280px; scroll-snap-align: center; background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
         
-        .text-review-card { flex: 0 0 280px; scroll-snap-align: center; background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; display: flex; flex-direction: column; }
-        .tr-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-        .tr-user { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 15px; color: #111; }
-        .tr-avatar { width: 40px; height: 40px; background: linear-gradient(135deg, #FFC0CB, #FFB6C1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; color: #fff; }
-        .tr-stars { color: #f1c40f; font-size: 15px; letter-spacing: 1px; }
-        .tr-text { font-size: 14px; color: #444; line-height: 1.6; font-style: italic; margin-bottom: 15px; }
-        .tr-footer { font-size: 12px; color: #999; margin-top: auto; display: flex; justify-content: space-between; font-weight: 500; }
-        .tr-verified { color: #27ae60; display: flex; align-items: center; gap: 4px; }
-
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; padding: 15px; overflow: auto;}
-        .modal-content { background: #fff; padding: 30px 20px; border-radius: 12px; max-width: 450px; width: 100%; position: relative; }
-        .close-modal { position: absolute; right: 15px; top: 10px; font-size: 30px; cursor: pointer; color: #777; z-index: 2100;}
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; padding: 15px; overflow: auto; backdrop-filter: blur(5px); }
+        .modal-content { background: #fff; padding: 30px; border-radius: 15px; max-width: 480px; width: 100%; position: relative; }
+        .close-modal { position: absolute; right: 20px; top: 15px; font-size: 35px; cursor: pointer; color: #aaa; z-index: 2100; }
         
         .form-group { margin-bottom: 15px; text-align: left; }
-        .form-group label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 5px; color: #555; }
-        .form-group input { width: 100%; padding: 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; background: #fafafa; transition: 0.3s; }
-        .form-group input:focus { outline: none; border-color: #d32f2f; background: #fff; }
+        .form-group label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 5px; color: #555; }
+        .form-group input { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; transition: 0.3s; }
 
-        .lightbox-img-wrap { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; touch-action: pan-x pan-y pinch-zoom; }
+        #imageLightbox { background: #000; }
+        .lightbox-img-wrap { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; touch-action: none; }
         #lightboxImage { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-        .mobile-only { display: none; }
-        .mobile-sticky-buy { display: none; }
-        
         @media (max-width: 768px) {
-            .container { margin: 0; border-radius: 0; padding-bottom: 80px; }
-            .product-info, .product-gallery { padding: 15px; }
-            .mobile-only { display: block; }
-            .desktop-only { display: none; }
-            h1 { font-size: 22px; }
-            .gallery-layout { gap: 0; }
-            .mobile-sticky-buy { display: flex !important; position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; padding: 10px 15px; padding-bottom: calc(10px + env(safe-area-inset-bottom)); box-shadow: 0 -5px 20px rgba(0,0,0,0.15); z-index: 9999; align-items: center; justify-content: space-between; border-top: 1px solid #eee; }
-            .mobile-sticky-buy .price-new { font-size: 24px; }
-            .mobile-sticky-buy .price-old { font-size: 14px; }
-            .mobile-sticky-buy .buy-btn { padding: 15px; width: auto; flex-grow: 1; margin-left: 15px; font-size: 16px; margin-bottom: 0 !important; animation: none; box-shadow: none; }
+            .mobile-sticky-buy { display: flex !important; position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; padding: 10px 15px; padding-bottom: calc(10px + env(safe-area-inset-bottom)); box-shadow: 0 -5px 20px rgba(0,0,0,0.15); z-index: 1000; align-items: center; justify-content: space-between; border-top: 1px solid #eee; }
+            .mobile-sticky-buy .buy-btn { width: auto; flex-grow: 1; padding: 15px; margin-left: 15px; font-size: 16px; animation: none; }
         }
     </style>
 </head>
 <body>
 
     <header>⚡ ФІНАЛЬНИЙ РОЗПРОДАЖ ⚡</header>
-    <div class="urgency-banner">На складі залишилося: <span>7 пар</span></div>
+    <div class="urgency-banner">Залишилося всього: <span>7 пар по акції</span></div>
 
     <div class="container">
         <div class="product-gallery">
             <div class="gallery-layout" id="mainImageWrap">
                 <button class="nav-arrow desktop-only" onclick="scrollGallery(-1)">❮</button>
-                <div class="discount-badge">-50%</div>
                 <div class="main-image-container">
+                    <div class="discount-badge">-50%</div>
                     <img id="mainImage" src="" alt="Кросівки" onclick="openLightbox()">
                     <div class="image-pagination" id="imagePagination"></div>
                 </div>
@@ -145,119 +126,92 @@
 
         <div class="product-info">
             <h1 id="dispName"></h1>
-            <div class="rating">★★★★★ <span>4.9 (86 відгуків)</span></div>
+            <div style="color:#f1c40f; margin-bottom: 15px;">★★★★★ <span style="color:#777; font-size:14px;">(86 відгуки)</span></div>
+            
             <div class="price-wrap">
                 <div>
                     <div class="price-old"><span class="dispOld"></span> ₴</div>
                     <div class="price-new"><span class="dispNew"></span> ₴</div>
                 </div>
-                <div style="margin-left: auto; background: #eefaf2; color: #27ae60; padding: 5px 10px; border-radius: 4px; font-size: 12px; font-weight: 800;">В НАЯВНОСТІ</div>
+                <div style="margin-left: auto; color:#27ae60; font-weight:800;">В НАЯВНОСТІ</div>
             </div>
 
-            <div id="sizeSection" style="padding: 10px; border-radius: 8px; margin-bottom: 20px; transition: 0.5s; background: #f9f9f9; border: 1px solid #eee;">
-                <div class="selector-title">
-                    <span>Розмір: <span id="sizeText" style="color: #d32f2f;">не обрано</span></span>
-                    <span class="size-link" onclick="toggleSizeModal(true)">📏 Таблиця</span>
+            <div id="sizeSection" style="padding:10px; border-radius:8px; border:1px solid #eee; margin-bottom:20px;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:15px; font-weight:700;">
+                    <span>РОЗМІР: <span id="sizeText" style="color:#d32f2f;">...</span></span>
+                    <span style="color:#0066cc; text-decoration:underline; cursor:pointer;" onclick="toggleSizeModal(true)">Таблиця</span>
                 </div>
                 <div class="size-options" id="sizeContainer"></div>
             </div>
 
-            <button class="buy-btn" onclick="openOrderModal()" style="margin-bottom: 25px;">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
-
-            <div class="features-list">
-                <div class="feature-item"><span>📦</span> Відправка Новою Поштою (1-2 дні)</div>
-                <div class="feature-item"><span>💳</span> Оплата ПРИ ОТРИМАННІ (без передоплат)</div>
-                <div class="feature-item"><span>🔄</span> Обмін/Повернення без проблем протягом 14 днів</div>
-            </div>
+            <button class="buy-btn" onclick="openOrderModal()">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
         </div>
     </div>
 
-    <div class="reviews-section">
-        <h2 class="section-title">Відгуки покупців</h2>
+    <!-- ТЕКСТОВІ ВІДГУКИ -->
+    <div class="reviews-section" style="max-width: 1000px; margin: 40px auto; padding: 0 15px;">
+        <h2 style="text-align:center; margin-bottom:30px; text-transform:uppercase; font-weight:900;">Відгуки покупців</h2>
         <div class="reviews-slider">
             <div class="text-review-card">
-                <div class="tr-header"><div class="tr-user"><div class="tr-avatar">О</div> Олена</div><div class="tr-stars">★★★★★</div></div>
-                <p class="tr-text">"Кросівки просто чудові! Дуже легенькі, на ніжці виглядають акуратно. Замовляла 38 розмір — підійшли ідеально. Дякую за швидку доставку!"</p>
-                <div class="tr-footer"><span class="tr-verified">✔ Куплений товар</span><span>Вчора</span></div>
+                <div class="tr-header"><b>Олена</b> <span style="color:#f1c40f;">★★★★★</span></div>
+                <p style="font-size:14px; font-style:italic; margin-top:10px;">"Дуже гарні кросівки! Легенькі, на ніжці виглядають дуже акуратно."</p>
             </div>
             <div class="text-review-card">
-                <div class="tr-header"><div class="tr-user"><div class="tr-avatar">М</div> Марина</div><div class="tr-stars">★★★★★</div></div>
-                <p class="tr-text">"Дуже задоволена покупкою. Колір як на фото, якість приємно здивувала за таку ціну. Оплачувала при отриманні, все чесно."</p>
-                <div class="tr-footer"><span class="tr-verified">✔ Куплений товар</span><span>2 дні тому</span></div>
-            </div>
-            <div class="text-review-card">
-                <div class="tr-header"><div class="tr-user"><div class="tr-avatar">Т</div> Тетяна</div><div class="tr-stars">★★★★★</div></div>
-                <p class="tr-text">"Брала для доньки, вона в захваті. Зручні, підошва м'яка. Будемо замовляти ще в іншому кольорі!"</p>
-                <div class="tr-footer"><span class="tr-verified">✔ Куплений товар</span><span>4 дні тому</span></div>
+                <div class="tr-header"><b>Марина</b> <span style="color:#f1c40f;">★★★★★</span></div>
+                <p style="font-size:14px; font-style:italic; margin-top:10px;">"Якість супер, за таку ціну навіть не очікувала. Швидка доставка."</p>
             </div>
         </div>
     </div>
 
-    <div class="mobile-sticky-buy">
-        <div>
-            <div class="price-old"><span class="dispOld"></span> ₴</div>
-            <div class="price-new"><span class="dispNew"></span> ₴</div>
-        </div>
+    <div class="mobile-sticky-buy" style="display:none;">
+        <div><div style="font-size:14px; color:#999; text-decoration:line-through;"><span class="dispOld"></span> ₴</div><div style="font-size:22px; font-weight:900; color:#d32f2f;"><span class="dispNew"></span> ₴</div></div>
         <button class="buy-btn" onclick="openOrderModal()">ЗАМОВИТИ</button>
     </div>
 
-    <div id="orderModal" class="modal" onclick="closeOrderModal(event)">
+    <!-- МОДАЛКИ -->
+    <div id="orderModal" class="modal" onclick="closeOrderModal()">
         <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-modal" onclick="closeOrderModal(event)">×</span>
-            <h3 style="text-align: center; text-transform: uppercase; margin-bottom: 15px;">Ваше замовлення</h3>
-            <div id="orderSummary" style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 14px; border: 1px dashed #d32f2f;"></div>
+            <span class="close-modal" onclick="closeOrderModal()">×</span>
+            <h3 style="text-align:center; text-transform:uppercase; margin-bottom:20px;">Ваше замовлення</h3>
+            <div id="orderSummary" style="background:#f9f9f9; padding:15px; border-radius:8px; border:1px dashed #d32f2f; margin-bottom:20px;"></div>
             <form onsubmit="sendFinalOrder(event)" id="mainForm">
                 <div class="form-group"><label>Ім'я та Прізвище *</label><input type="text" id="custName" required placeholder="Ірина Ковальчук"></div>
-                <div class="form-group"><label>Номер телефону *</label><input type="tel" id="custPhone" required placeholder="+38 (0XX) XXX XX XX"></div>
-                <div class="form-group"><label>Місто/Село *</label><input type="text" id="custCity" required placeholder="м. Львів"></div>
+                <div class="form-group"><label>Телефон *</label><input type="tel" id="custPhone" required placeholder="097 000 00 00"></div>
+                <div class="form-group"><label>Місто *</label><input type="text" id="custCity" required placeholder="м. Львів"></div>
                 <div class="form-group"><label>Відділення Нової Пошти *</label><input type="text" id="custPost" required placeholder="Відділення №10"></div>
-                <div class="form-group"><label>Коментар (необов'язково)</label><input type="text" id="custComment" placeholder="Напишіть ваші побажання"></div>
-                <button type="submit" class="buy-btn" id="subBtn">ПІДТВЕРДИТИ ЗАМОВЛЕННЯ</button>
+                <div class="form-group"><label>Коментар (необов'язково)</label><input type="text" id="custComment"></div>
+                <button type="submit" class="buy-btn" id="subBtn">ПІДТВЕРДИТИ</button>
             </form>
-            <div id="successMsg" style="display:none; padding: 30px 0; text-align: center;">
-                <div style="font-size: 60px; margin-bottom: 10px;">✅</div>
-                <h3 style="color: #27ae60;">ДЯКУЄМО ЗА ЗАМОВЛЕННЯ!</h3>
-                <p>Наш менеджер зв'яжеться з вами для підтвердження.</p>
+            <div id="successMsg" style="display:none; text-align:center; padding:30px 0;">
+                <div style="font-size:60px;">✅</div>
+                <h2 style="color:#27ae60;">ДЯКУЄМО!</h2>
+                <p>Замовлення прийнято. Чекайте на дзвінок.</p>
             </div>
         </div>
     </div>
 
-<!-- ТАБЛИЦЯ РОЗМІРІВ (Текстова) -->
     <div id="sizeGuideModal" class="modal" onclick="toggleSizeModal(false)">
         <div class="modal-content" onclick="event.stopPropagation()">
             <span class="close-modal" onclick="toggleSizeModal(false)">×</span>
-            <h3 style="text-align: center; text-transform: uppercase; margin-bottom: 20px; font-weight: 900;">Таблиця розмірів</h3>
-            
-            <style>
-                .size-table { width: 100%; border-collapse: collapse; }
-                .size-table th, .size-table td { border: 1px solid #eee; padding: 12px; text-align: center; font-size: 16px; }
-                .size-table th { background: #fdf2f2; color: #d32f2f; font-weight: 800; }
-                .size-table tr:nth-child(even) { background: #fafafa; }
-            </style>
-
-            <table class="size-table">
-                <tr>
-                    <th>Розмір</th>
-                    <th>Довжина устілки</th>
-                </tr>
-                <tr><td>36</td><td>23.0 см</td></tr>
-                <tr><td>37</td><td>23.5 см</td></tr>
-                <tr><td>38</td><td>24.0 см</td></tr>
-                <tr><td>39</td><td>24.5 см</td></tr>
-                <tr><td>40</td><td>25.0 см</td></tr>
-                <tr><td>41</td><td>25.5 см</td></tr>
+            <h3 style="text-align:center; margin-bottom:20px;">Розмірна сітка</h3>
+            <table style="width:100%; border-collapse:collapse; text-align:center;">
+                <tr style="background:#fdf2f2;"> <th style="padding:10px; border:1px solid #eee;">Розмір</th> <th style="padding:10px; border:1px solid #eee;">Устілка</th> </tr>
+                <tr><td style="padding:10px; border:1px solid #eee;">36</td><td style="padding:10px; border:1px solid #eee;">23.0 см</td></tr>
+                <tr><td style="padding:10px; border:1px solid #eee;">37</td><td style="padding:10px; border:1px solid #eee;">23.5 см</td></tr>
+                <tr><td style="padding:10px; border:1px solid #eee;">38</td><td style="padding:10px; border:1px solid #eee;">24.0 см</td></tr>
+                <tr><td style="padding:10px; border:1px solid #eee;">39</td><td style="padding:10px; border:1px solid #eee;">24.5 см</td></tr>
+                <tr><td style="padding:10px; border:1px solid #eee;">40</td><td style="padding:10px; border:1px solid #eee;">25.0 см</td></tr>
+                <tr><td style="padding:10px; border:1px solid #eee;">41</td><td style="padding:10px; border:1px solid #eee;">25.5 см</td></tr>
             </table>
-
-            <div style="margin-top: 20px; padding: 10px; background: #fff8e1; border-radius: 6px; font-size: 13px; color: #856404; line-height: 1.4;">
-                📌 <b>Порада:</b> Якщо ви не впевнені у розмірі, заміряйте довжину своєї устілки в зручному взутті та оберіть відповідний розмір по таблиці.
-            </div>
         </div>
     </div>
-       
-    <div id="imageLightbox" class="modal" onclick="closeLightbox(event)"><span class="close-modal" style="color:white; right:20px; top:20px;" onclick="closeLightbox(event)">×</span><div class="lightbox-img-wrap"><img id="lightboxImage" src=""></div></div>
+
+    <div id="imageLightbox" class="modal" onclick="closeLightbox()">
+        <span class="close-modal" style="color:white; right:25px; top:20px;" onclick="closeLightbox()">×</span>
+        <div class="lightbox-img-wrap" id="lbImgWrap"><img id="lightboxImage" src=""></div>
+    </div>
 
 <script>
-    // ПРИВ'ЯЗКА ДАНИХ З CONFIG
     document.getElementById('dispName').innerText = CONFIG.productName;
     document.querySelectorAll('.dispOld').forEach(el => el.innerText = CONFIG.priceOld);
     document.querySelectorAll('.dispNew').forEach(el => el.innerText = CONFIG.priceNew);
@@ -268,12 +222,20 @@
         b.onclick = function() { selectSize(this); }; szCont.appendChild(b);
     });
 
-    if(CONFIG.fbPixel && CONFIG.fbPixel !== "ВАШ_ID_ПІКСЕЛЯ") {
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', CONFIG.fbPixel); fbq('track', 'PageView');
+    let currentIdx = 0; let activeSize = '';
+
+    function updateImg() {
+        const img = CONFIG.images[currentIdx];
+        document.getElementById('mainImage').src = img;
+        if(document.getElementById('lightboxImage')) document.getElementById('lightboxImage').src = img;
+        document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === currentIdx));
+        document.querySelectorAll('.thumbnail').forEach((t, i) => t.classList.toggle('active', i === currentIdx));
     }
 
-    let currentIdx = 0; let activeSize = '';
+    function scrollGallery(d) {
+        currentIdx = (currentIdx + d + CONFIG.images.length) % CONFIG.images.length;
+        updateImg();
+    }
 
     function renderGallery() {
         const dots = document.getElementById('imagePagination');
@@ -287,18 +249,57 @@
         updateImg();
     }
 
-    function updateImg() {
-        if(CONFIG.images.length > 0) {
-            document.getElementById('mainImage').src = CONFIG.images[currentIdx];
-            document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === currentIdx));
-            document.querySelectorAll('.thumbnail').forEach((t, i) => t.classList.toggle('active', i === currentIdx));
-        }
+    function openLightbox() {
+        if(window.innerWidth > 768) return;
+        document.getElementById('imageLightbox').style.display = 'flex';
+        history.pushState({ modal: 'lightbox' }, '');
+    }
+    function closeLightbox() {
+        document.getElementById('imageLightbox').style.display = 'none';
+        if(history.state && history.state.modal === 'lightbox') history.back();
     }
 
-    function scrollGallery(d) {
-        currentIdx = (currentIdx + d + CONFIG.images.length) % CONFIG.images.length;
-        updateImg();
+    function openOrderModal() {
+        if(!activeSize) { 
+            const s = document.getElementById('sizeSection'); s.scrollIntoView({behavior:'smooth', block:'center'});
+            s.style.borderColor = 'red'; setTimeout(()=>s.style.borderColor='#eee', 1000); return;
+        }
+        document.getElementById('orderSummary').innerHTML = `<b>Товар:</b> ${CONFIG.productName}<br><b>Розмір:</b> ${activeSize}<br><b>Сума:</b> ${CONFIG.priceNew} ₴`;
+        document.getElementById('orderModal').style.display = 'flex';
+        history.pushState({ modal: 'order' }, '');
     }
+    function closeOrderModal() {
+        document.getElementById('orderModal').style.display = 'none';
+        if(history.state && history.state.modal === 'order') history.back();
+    }
+
+    function toggleSizeModal(s) {
+        document.getElementById('sizeGuideModal').style.display = s ? 'flex' : 'none';
+        if(s) history.pushState({ modal: 'size' }, '');
+        else if(history.state && history.state.modal === 'size') history.back();
+    }
+
+    window.addEventListener('popstate', (e) => {
+        document.getElementById('imageLightbox').style.display = 'none';
+        document.getElementById('orderModal').style.display = 'none';
+        document.getElementById('sizeGuideModal').style.display = 'none';
+    });
+
+    let touchStartX = 0;
+    const swipeArea = document.getElementById('mainImageWrap');
+    const lbArea = document.getElementById('lbImgWrap');
+
+    const handleStart = (e) => touchStartX = e.touches[0].clientX;
+    const handleEnd = (e) => {
+        const touchEndX = e.changedTouches[0].clientX;
+        if (touchStartX - touchEndX > 40) scrollGallery(1);
+        if (touchStartX - touchEndX < -40) scrollGallery(-1);
+    };
+
+    swipeArea.addEventListener('touchstart', handleStart, {passive:true});
+    swipeArea.addEventListener('touchend', handleEnd, {passive:true});
+    lbArea.addEventListener('touchstart', handleStart, {passive:true});
+    lbArea.addEventListener('touchend', handleEnd, {passive:true});
 
     const mImg = document.getElementById('mainImage');
     mImg.addEventListener('mousemove', function(e) {
@@ -311,35 +312,11 @@
     });
     mImg.addEventListener('mouseleave', function() { this.style.transform = "scale(1)"; });
 
-    let stX = 0;
-    document.getElementById('mainImageWrap').addEventListener('touchstart', e => stX = e.touches[0].clientX, {passive:true});
-    document.getElementById('mainImageWrap').addEventListener('touchend', e => {
-        let diff = stX - e.changedTouches[0].clientX;
-        if(Math.abs(diff) > 40) scrollGallery(diff > 0 ? 1 : -1);
-    }, {passive:true});
-
     function selectSize(btn) {
         document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active'); activeSize = btn.innerText;
         document.getElementById('sizeText').innerText = activeSize;
-        document.getElementById('sizeText').style.color = '#111';
     }
-
-    function openOrderModal() {
-        if(!activeSize) { 
-            const s = document.getElementById('sizeSection');
-            s.scrollIntoView({behavior:'smooth', block:'center'});
-            s.style.borderColor = 'red'; setTimeout(()=>s.style.borderColor='#eee', 1000);
-            return;
-        }
-        document.getElementById('orderSummary').innerHTML = `<b>Товар:</b> ${CONFIG.productName}<br><b>Розмір:</b> ${activeSize}<br><b>Сума до сплати:</b> ${CONFIG.priceNew} ₴`;
-        document.getElementById('orderModal').style.display = 'flex';
-    }
-
-    function closeOrderModal(e) { if(e.target.id==='orderModal' || e.target.className==='close-modal') document.getElementById('orderModal').style.display='none'; }
-    function toggleSizeModal(s) { document.getElementById('sizeGuideModal').style.display = s?'flex':'none'; }
-    function openLightbox() { if(window.innerWidth<=768) { document.getElementById('lightboxImage').src = CONFIG.images[currentIdx]; document.getElementById('imageLightbox').style.display='flex'; } }
-    function closeLightbox() { document.getElementById('imageLightbox').style.display='none'; }
 
     function sendFinalOrder(e) {
         e.preventDefault();
@@ -351,26 +328,24 @@
         const cm = document.getElementById('custComment').value;
 
         let cleanP = p.replace(/\D/g,'');
-        let linkP = cleanP;
-        if(linkP.startsWith('380')) linkP = linkP.substring(2);
-        else if(linkP.startsWith('80')) linkP = linkP.substring(1);
-        else if(linkP.length === 9) linkP = '0' + linkP;
-        let viberP = "38" + linkP;
+        let viberP = cleanP.startsWith('380') ? cleanP : "38" + cleanP.replace(/^0/,'');
 
         let msg = `📦 <b>НОВЕ ЗАМОВЛЕННЯ!</b>\n\n<b>Товар:</b> ${CONFIG.productName}\n<b>Розмір:</b> ${activeSize}\n<b>Ціна:</b> ${CONFIG.priceNew} грн\n\n<b>Клієнт:</b> ${n}\n<b>Тел:</b> <code>${p}</code>\n<b>Місто:</b> ${c}\n<b>Пошта:</b> ${o}\n<b>Ком:</b> ${cm}`;
         
         const kb = { inline_keyboard:[[{text:"💬 Telegram", url:"https://t.me/+"+viberP},{text:"💜 Viber", url:"https://msng.link/vi/"+viberP}]] };
-        const ids = CONFIG.tgChats.split(',').map(id => id.trim());
-
-        Promise.all(ids.map(id => {
-            return fetch(`https://api.telegram.org/bot${CONFIG.tgToken}/sendMessage?chat_id=${id}&text=${encodeURIComponent(msg)}&parse_mode=HTML&reply_markup=${encodeURIComponent(JSON.stringify(kb))}`);
+        
+        Promise.all(CONFIG.tgChats.split(',').map(id => {
+            return fetch(`https://api.telegram.org/bot${CONFIG.tgToken}/sendMessage?chat_id=${id.trim()}&text=${encodeURIComponent(msg)}&parse_mode=HTML&reply_markup=${encodeURIComponent(JSON.stringify(kb))}`);
         })).then(() => {
             document.getElementById('mainForm').style.display = 'none';
-            document.getElementById('orderSummary').style.display = 'none';
             document.getElementById('successMsg').style.display = 'block';
+            
+            // PIXELS TRACKING
             if(window.fbq) fbq('track', 'Purchase', {value: CONFIG.priceNew, currency: 'UAH'});
+            if(window.ttq) ttq.track('CompletePayment', {value: CONFIG.priceNew, currency: 'UAH'});
         });
     }
+
     renderGallery();
 </script>
 </body>
