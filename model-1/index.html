@@ -419,7 +419,24 @@
         const kb = { inline_keyboard:[[{text:"💬 Telegram", url:"https://t.me/+"+viberP},{text:"💜 Viber", url:"https://msng.link/vi/"+viberP}]] };
         
         Promise.all(CONFIG.tgChats.split(',').map(id => {
-            return fetch(`https://api.telegram.org/bot${CONFIG.tgToken}/sendMessage?chat_id=${id.trim()}&text=${encodeURIComponent(msg)}&parse_mode=HTML&reply_markup=${encodeURIComponent(JSON.stringify(kb))}`);
+            return fetch(`https://api.telegram.org/bot${CONFIG.tgToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: id.trim(),
+                    text: msg,
+                    parse_mode: 'HTML',
+                    reply_markup: kb
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (!data.ok) {
+                    console.error(`❌ Ошибка Telegram для ID ${id.trim()}:`, data.description);
+                }
+            });
         })).then(() => {
             document.getElementById('mainForm').style.display = 'none';
             document.getElementById('successMsg').style.display = 'block';
